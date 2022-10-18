@@ -14,6 +14,10 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function createDreamTeam(members) {
+    if (Array.isArray(members) !== true) {
+        return false;
+    }
+
     let newArr = [];
     let upStr = '';
     let firstLetter = '';
